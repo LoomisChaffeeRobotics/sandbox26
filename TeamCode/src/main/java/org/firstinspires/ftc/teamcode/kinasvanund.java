@@ -31,6 +31,8 @@ public class kinasvanund extends OpMode {
     public void loop() {
         FL.setPower(gamepad1.left_stick_y);
         FR.setPower(gamepad1.right_stick_y);
+        RL.setPower(gamepad1.left_stick_y);
+        RR.setPower(gamepad1.right_stick_y);
 
     }
 }
