@@ -17,7 +17,6 @@ public class Kin extends OpMode{
 
     @Override
     public void loop() {
-        slide.setPower(0);
         if(gamepad1.a) {
             slide.setPower(1);
         }
