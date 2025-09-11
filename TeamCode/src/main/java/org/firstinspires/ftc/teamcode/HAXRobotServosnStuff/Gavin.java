@@ -19,10 +19,10 @@ public class Gavin extends OpMode {
     @Override
     public void loop(){
         if (gamepad1.dpad_up){
-            coil.setPower(0.1);
+            coil.setPower(0.5);
         }
         else if (gamepad1.dpad_down){
-            coil.setPower(-0.1);
+            coil.setPower(-0.5);
         }
         else{
             coil.setPower(0);
