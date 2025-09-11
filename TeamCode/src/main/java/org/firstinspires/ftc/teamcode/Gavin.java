@@ -22,6 +22,7 @@ public class Gavin extends OpMode{
         ChRF = hardwareMap.get(DcMotor.class, "frontRight");
         ChRB = hardwareMap.get(DcMotor.class, "backRight");
 
+
         ChRF.setDirection(DcMotorSimple.Direction.REVERSE);
         ChRB.setDirection(DcMotorSimple.Direction.REVERSE);
 
