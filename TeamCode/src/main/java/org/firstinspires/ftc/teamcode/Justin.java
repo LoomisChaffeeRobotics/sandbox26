@@ -11,6 +11,12 @@ public class Justin extends OpMode {
     DcMotor frontRight;
     DcMotor rearLeft;
     DcMotor rearRight;
+
+    @Override
+    public double getRuntime() {
+        return super.getRuntime();
+    }
+
     @Override
     public void init(){
         frontLeft=hardwareMap.get(DcMotor.class, "frontLeft");
