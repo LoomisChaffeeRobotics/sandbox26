@@ -37,5 +37,7 @@ public class KosiTankDrive extends OpMode {
 
         back_left.setPower(gamepad1.left_stick_y);
         back_right.setPower(gamepad1.right_stick_y);
+
+        telemetry.update();
     }
 }
