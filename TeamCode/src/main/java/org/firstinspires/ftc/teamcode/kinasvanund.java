@@ -13,10 +13,10 @@ public class kinasvanund extends OpMode {
     DcMotor RR;
     @Override
     public void init() {
-        FL = hardwareMap.get(DcMotor.class, "frontleft");
-        FR = hardwareMap.get(DcMotor.class, "frontright");
-        RL = hardwareMap.get(DcMotor.class, "rearleft");
-        RR = hardwareMap.get(DcMotor.class, "rearright");
+        FL = hardwareMap.get(DcMotor.class, "frontLeft");
+        FR = hardwareMap.get(DcMotor.class, "frontRight");
+        RL = hardwareMap.get(DcMotor.class, "rearLeft");
+        RR = hardwareMap.get(DcMotor.class, "rearRight");
 
         FL.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         FR.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
