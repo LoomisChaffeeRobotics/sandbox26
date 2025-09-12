@@ -24,7 +24,7 @@ public class haxarmpivot extends OpMode {
     public void loop() {
         curPos = arm.getCurrentPosition();
 
-        
+
 
         telemetry.addData("enc", curPos);
     }
