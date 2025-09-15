@@ -75,5 +75,7 @@ public class haxarmpivot extends OpMode {
         }
         telemetry.addData("enc", curPos);
         t2.addData("enc", curPos);
+        t2.addData("tar", target);
+        telemetry.update();
     }
 }
