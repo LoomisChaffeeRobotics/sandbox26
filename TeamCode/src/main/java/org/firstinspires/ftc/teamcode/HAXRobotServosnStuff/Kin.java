@@ -9,6 +9,7 @@ import com.qualcomm.robotcore.hardware.Servo;
 @TeleOp
 public class Kin extends OpMode{
     DcMotor slide;
+    Servo
     @Override
 
     public void init() {
