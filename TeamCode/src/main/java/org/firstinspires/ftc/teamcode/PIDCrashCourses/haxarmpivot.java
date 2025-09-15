@@ -17,28 +17,35 @@ public class haxarmpivot extends OpMode {
     double curPos;
     double target = 0;
     double eCur, ePrev;
-    public static double kP = 0.01;
-    public static double kI = 0;
-    public static double kD = 0;
-    double P, I, D;
+    public static double kP = 0.007;
+    public static double kI = 0.0005;
+    public static double kD = 0.2;
+
+    public static double kG= 0.3;
+    double P, I, D, F;
     double eInt, eDev;
     double armMax = 343;
 
-    double iMax = 0.25;
+    public static double iMax = 0.3;
 
     double iRange = 0.5;
+
     boolean first = true;
     FtcDashboard dash = FtcDashboard.getInstance();
     Telemetry t2 = dash.getTelemetry();
     @Override
     public void init() {
         arm = hardwareMap.get(DcMotor.class,"pivot");
+        arm.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+        arm.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         //telemetry.addData("enc", arm.getCurrentPosition());
     }
 
     @Override
     public void loop() {
+
         curPos = arm.getCurrentPosition();
+        F = Math.cos(Math.toRadians(curPos / 1400 * 360)) * kG;
         eCur = target - curPos;
         if (first){
             ePrev = eCur;
@@ -65,7 +72,7 @@ public class haxarmpivot extends OpMode {
 
         I = eInt * kI;
 
-        arm.setPower(P + I + D);
+        arm.setPower(P + I + D + F);
 
         if (gamepad1.a){
             target = armMax / 2;
@@ -76,6 +83,8 @@ public class haxarmpivot extends OpMode {
         telemetry.addData("enc", curPos);
         t2.addData("enc", curPos);
         t2.addData("tar", target);
+        t2.addData("power ", P + I + D + F);
+        t2.update();
         telemetry.update();
     }
 }
