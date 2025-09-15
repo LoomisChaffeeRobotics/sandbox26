@@ -1,12 +1,13 @@
 package org.firstinspires.ftc.teamcode.HAXRobotServosnStuff;
 
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.Servo;
 
-@TeleOp
+@Disabled
 public class Tk extends OpMode {
 DcMotor frontLeft;
 Servo happyman;
@@ -17,7 +18,7 @@ Servo happyman;
         frontLeft=hardwareMap.get(DcMotor.class, "slide");
         frontLeft.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         frontLeft.setDirection(DcMotorSimple.Direction.REVERSE);
-        happyman
+
 
     }
 

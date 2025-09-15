@@ -1,11 +1,12 @@
 package org.firstinspires.ftc.teamcode.HAXRobotServosnStuff;
 
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 
-@TeleOp
+@Disabled
 public class Liya extends OpMode{
 
     DcMotor slide;

@@ -1,9 +1,12 @@
 package org.firstinspires.ftc.teamcode.HAXRobotServosnStuff;
 
+import androidx.appcompat.app.ActionBar;
+
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
-
+@Disabled
 public class Nikhil extends OpMode {
 
     DcMotor slide;
