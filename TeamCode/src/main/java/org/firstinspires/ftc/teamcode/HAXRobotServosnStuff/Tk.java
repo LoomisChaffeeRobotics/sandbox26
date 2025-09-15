@@ -17,7 +17,7 @@ Servo happyman;
         frontLeft=hardwareMap.get(DcMotor.class, "slide");
         frontLeft.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         frontLeft.setDirection(DcMotorSimple.Direction.REVERSE);
-        happyman
+
 
     }
 
