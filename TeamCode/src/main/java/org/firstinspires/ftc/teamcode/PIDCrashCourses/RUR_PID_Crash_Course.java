@@ -1,10 +1,12 @@
 package org.firstinspires.ftc.teamcode.PIDCrashCourses;
 
+import com.acmerobotics.dashboard.config.Config;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.util.ElapsedTime;
 @TeleOp
+@Config
 public class RUR_PID_Crash_Course extends OpMode {
     DcMotor pivot;
     double error = 0;

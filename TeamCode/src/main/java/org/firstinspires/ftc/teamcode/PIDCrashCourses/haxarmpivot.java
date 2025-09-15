@@ -2,11 +2,16 @@ package org.firstinspires.ftc.teamcode.PIDCrashCourses;
 
 
 
+import com.acmerobotics.dashboard.FtcDashboard;
+import com.acmerobotics.dashboard.config.Config;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 
+import org.firstinspires.ftc.robotcore.external.Telemetry;
+
 @TeleOp
+@Config
 public class haxarmpivot extends OpMode {
     DcMotor arm;
     double curPos;
@@ -23,6 +28,8 @@ public class haxarmpivot extends OpMode {
 
     double iRange = 0.5;
     boolean first = true;
+    FtcDashboard dash = FtcDashboard.getInstance();
+    Telemetry t2 = dash.getTelemetry();
     @Override
     public void init() {
         arm = hardwareMap.get(DcMotor.class,"pivot");
@@ -67,5 +74,6 @@ public class haxarmpivot extends OpMode {
             target = armMax;
         }
         telemetry.addData("enc", curPos);
+        t2.addData("enc", curPos);
     }
 }
